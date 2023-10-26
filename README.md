@@ -1,2 +1,5 @@
 # Tinkoff_labs
-Aaaaaahh i love js
+6408
+Серафимович Дмитрий Павлович
+Junior Front-end Developer
+Я вам запрещаю...
