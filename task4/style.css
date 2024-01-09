@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @media screen and (max-width: 640px) {
+    @supports (zoom:normal) {
+      html {
+          min-width: 640px;
+      }
+    }
+  }
+
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    margin: 0;
+  }
+}
+
+@layer components {
+  .header {
+    @apply bg-zinc-700 w-full relative block
+  }
+
+  .header__title {
+    @apply text-3xl py-4 shadow-sm
+  }
+
+  .header__title [name=group] {
+    @apply text-red-500
+  }
+
+  .button {
+    @apply p-2 shrink-0
+  }
+  
+  .button-red {
+    @apply rounded-md bg-red-600 hover:bg-red-700 transition-colors duration-200
+  }
+  
+  .button-del {
+    @apply rounded-md hover:bg-white/75 transition-colors duration-200 text-red-600 font-bold
+  }
+
+  .catalog {
+    @apply grid gap-6 2xl:grid-cols-3 lg:grid-cols-2
+  }
+
+  .card {
+    @apply flex w-full gap-3 p-3 outline-2 relative outline-red-600 hover:outline cursor-pointer
+  }
+
+  .card__img {
+    @apply h-52 aspect-square p-2
+  }
+
+  .card__info {
+    @apply flex flex-col min-w-0 grow gap-3
+  }
+
+  .card__title {
+    @apply grow text-4xl font-bold font-inter truncate pb-2
+  }
+
+  .card__minor-info {
+    @apply flex items-center gap-4 grow
+  }
+
+  .modal {
+    @apply fixed inset-0 bg-black/50 hidden justify-center items-center
+  }
+
+  .modal__window {
+    @apply lg:w-[1000px] md:w-[500px] bg-[#242424] flex lg:flex-row sm:flex-col
+  }
+
+  .modal__img {
+    @apply bg-slate-200 lg:w-[50%] md:w-full min-w-0 aspect-square
+  }
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
