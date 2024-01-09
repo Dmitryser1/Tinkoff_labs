@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карточки</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container mx-auto">
+        <div name="header" id="header" class="header-content">
+          <div name="infoPL" class="flex gap-2">
+            <div class="h-10 w-52 is-loading"></div>
+            <div class="h-10 w-56 is-loading"></div>
+            <div class="h-10 w-28 is-loading"></div>
+          </div>
+          <div name="gitPL" class="h-10 w-80 is-loading"></div>
+          <h1 name="info" class="header__title hidden">
+            <span name="fio">Александра Коломытцева</span>
+            <span name="group">6408</span>
+          </h1>
+          <a name="git" class="hidden" href="https://github.com/anaxelo/web">https://github.com/anaxelo/web</a>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <h1 class="text-5xl py-6">Витрина карточек</h1>
+          <div class="flex gap-2 items-center">
+            <button id="add-btn" class="button button-red">
+              <p class="px-4 flex gap-2 font-bold items-center">
+                <span>Добавить</span>
+                <img class="h-5 aspect-square" src="img/add-card.svg" alt="add">
+              </p>
+            </button>
+            <button id="default-btn" class="button button-del">
+              <p class=" flex gap-2 font-bold items-center">
+                <img class="h-5 aspect-square" src="img/reload.svg" alt="reload">
+              </p>
+            </button>
+          </div>
+        </div>
+
+        <div id="catalog" class="catalog">
+          <div class="card">
+            <div class="card__img is-loading">
+            </div>
+            <div class="card__info">
+              <div class="flex">
+                <h1 name="name" class="h-10 w-32 is-loading"></h1>
+              </div>
+              <p name="description" class="grow is-loading"></p>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="provider" class="is-loading h-8 w-40"></p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="code" class="is-loading h-8 w-32"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img is-loading">
+            </div>
+            <div class="card__info">
+              <div class="flex">
+                <h1 name="name" class="h-10 w-32 is-loading"></h1>
+              </div>
+              <p name="description" class="grow is-loading"></p>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="provider" class="is-loading h-8 w-40"></p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="code" class="is-loading h-8 w-32"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img is-loading">
+            </div>
+            <div class="card__info">
+              <div class="flex">
+                <h1 name="name" class="h-10 w-32 is-loading"></h1>
+              </div>
+              <p name="description" class="grow is-loading"></p>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="provider" class="is-loading h-8 w-40"></p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="code" class="is-loading h-8 w-32"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img is-loading">
+            </div>
+            <div class="card__info">
+              <div class="flex">
+                <h1 name="name" class="h-10 w-32 is-loading"></h1>
+              </div>
+              <p name="description" class="grow is-loading"></p>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="provider" class="is-loading h-8 w-40"></p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="code" class="is-loading h-8 w-32"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img is-loading">
+            </div>
+            <div class="card__info">
+              <div class="flex">
+                <h1 name="name" class="h-10 w-32 is-loading"></h1>
+              </div>
+              <p name="description" class="grow is-loading"></p>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="provider" class="is-loading h-8 w-40"></p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="card__minor-info">
+                  <p name="code" class="is-loading h-8 w-32"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <template id="card-template">
+            <div class="card">
+              <div class="card__img">
+                <img name="img" class="object-cover w-full h-full bg-zinc-600" src="https://nazya.com/anyimage/ae01.alicdn.com/kf/HTB15Y7FyWmWBuNjy1Xaq6xCbXXaa/2018.jpg" alt="">
+              </div>
+              <div class="card__info">
+                <div class="flex">
+                  <h1 name="name" class="card__title">Кеды</h1>
+                  <button name="delBtn" class="button self-start button-del">
+                    <img class="h-5 aspect-square" src="img/trash.svg" alt="">
+                  </button>
+                </div>
+
+                <p name="description" class="grow overflow-hidden">Описание Описание Описание Описание Описание Описание Описание Описание </p>
+                <div class="flex">
+                  <div class="card__minor-info">
+                    <img class="w-5 aspect-square" src="img/user.svg" alt="Поставщик">
+                    <p name="provider" class="text-white/50">Петя</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="card__minor-info">
+                    <img class="w-5 aspect-square" src="img/tag.svg" alt="Код">
+                    <p name="code" class="text-white/50">2312312312</p>
+                  </div>
+                  <button name="editBtn" class="button button-red">
+                    <img class="w-5 aspect-square" src="img/edit.svg">
+                  </button>
+                </div>
+              </div>
+              <div name="deleting" class="sendBG">
+                <div class="flex gap-4 items-center">
+                  <p class="text-2xl text-red-600">Удаление</p>
+                  <div class="loader-red"></div>
+                </div>
+              </div>
+            </div>
+          </template>
+          <template id="card-preloader-template">
+            <div class="card">
+              <div class="card__img is-loading">
+              </div>
+              <div class="card__info">
+                <div class="flex">
+                  <h1 name="name" class="h-10 w-32 is-loading"></h1>
+                </div>
+                <p name="description" class="grow is-loading"></p>
+                <div class="flex">
+                  <div class="card__minor-info">
+                    <p name="provider" class="is-loading h-8 w-40"></p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="card__minor-info">
+                    <p name="code" class="is-loading h-8 w-32"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div id="modal-window" class="modal__window">
+        <div class="modal__img">
+          <img class="object-cover w-full h-full bg-zinc-600" src="https://nazya.com/anyimage/ae01.alicdn.com/kf/HTB15Y7FyWmWBuNjy1Xaq6xCbXXaa/2018.jpg" alt="Изображение карточки">
+        </div>
+        <form class="p-10 flex flex-col lg:w-[50%] md:w-fullmin-w-0 gap-3">
+          <h1 name="title" class="text-4xl font-bold">Карточка:</h1>
+          <input name="id" type="text" hidden>
+          <input name="img" class="p-2" type="text" placeholder="Ссылка на изображение" required>
+          <input name="name" class="p-2 w-full" type="text" placeholder="Название" required>
+          <textarea name="description" class="p-2" type="text" placeholder="Описание" required ></textarea>
+          <input name="provider" class="p-2" type="text" placeholder="Поставщик" required>
+          <input name="code" type="number" class="p-2" placeholder="Код товара" required>
+          <button type="submit" class="button button-red">Сохранить</button>
+        </form>
+        <div name="sending" class="sendBG">
+          <div class="flex gap-4 items-center">
+            <p class="text-2xl text-white">Отправка</p>
+            <div class="loader-white"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

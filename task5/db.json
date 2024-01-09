@@ -1,0 +1,33 @@
+{
+  "items": [
+    {
+      "img": "https://nazya.com/anyimage/ae01.alicdn.com/kf/HTB15Y7FyWmWBuNjy1Xaq6xCbXXaa/2018.jpg",
+      "name": "Кеды 1",
+      "description": "Описание описание\n описание",
+      "provider": "Поставщик 1",
+      "code": 2314324,
+      "id": 1
+    },
+    {
+      "img": "http://lamcdn.net/furfurmag.ru/post-cover/AmEAJrRXAnJlkIFoC7ahfg-default.jpg",
+      "name": "Кеды 2",
+      "description": "Описание описание\n описание",
+      "provider": "Поставщик 2",
+      "code": 987675,
+      "id": 2
+    },
+    {
+      "img": "https://ae04.alicdn.com/kf/H1ef3094fe1d640da8d5f385a563f23ddT.jpg",
+      "name": "Кеды 3",
+      "description": "Описание описание\n описание",
+      "provider": "Поставщик 3",
+      "code": 58566,
+      "id": 3
+    }
+  ],
+  "creatorInfo": {
+    "name": "Александра Коломытцева",
+    "group": "6408",
+    "repo": "https://github.com/anaxelo/web"
+  }
+}
